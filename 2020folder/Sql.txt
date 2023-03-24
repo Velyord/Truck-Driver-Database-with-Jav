@@ -1,0 +1,37 @@
+/*Renta*/
+
+SELECT Name, marka, date, cena
+FROM Renta R JOIN Person P
+ON R.ID_person = P.ID
+JOIN Car C
+ON R.ID_car = C.ID
+
+
+
+/*Сложна справка*/
+
+Sring name = 'Ivan';
+String Marka = 'Mitsubishi';
+
+SELECT Name, marka, date, cena
+FROM Renta R JOIN Person P
+ON R.ID_person = P.ID
+JOIN Car C
+ON R.ID_car = C.ID
+WHERE Name = name And marka = Marka
+(Сравнението идва от примерните стрингове отгоре. Все едно идват като входни параметри и 
+казваме да ни изведе информацияна от селекта, като името трябва да е равно на входния 
+параметър за име, а марката трябва да е като входния параметър за марка)
+
+
+
+/*Втора сложна справка */
+int Year = 2020;
+String tel = '0886184545'
+
+SELECT Name, marka, date, cena
+FROM Renta R JOIN Person P
+ON R.ID_person = P.ID
+JOIN Car C
+ON R.ID_car = C.ID
+WHERE year = Year AND telefon = tel
